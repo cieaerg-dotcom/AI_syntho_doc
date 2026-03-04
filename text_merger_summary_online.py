@@ -93,12 +93,16 @@ if uploaded_files:
                             
             st.success("檔案解析完成！現在可以開始對話或生成摘要。")
 
-# --- 5. 對話介面區 ---
+### --- 5. 對話介面區 ---
 st.divider()
 st.subheader("💬 與你的檔案對話")
 
-# 顯示歷史訊息
-for message in st.session_state.messages:
+# 加入以下這兩行來初始化，確保變數存在：
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+### 顯示歷史訊息
+for message in st.session_state.messages: # [1]
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
