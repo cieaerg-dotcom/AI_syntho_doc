@@ -24,8 +24,8 @@ with st.sidebar:
             "gemini-2.5-flash",
             "gemini-2.5-flash-lite",
             "gemini-2.5-flash",
-            "gemini-3-flash-lite-preview",
             "gemini-3-flash-preview",
+            "gemini-3.1-flash-lite-preview",
         ]
     )
     use_thinking = st.checkbox("啟用思考模式")
