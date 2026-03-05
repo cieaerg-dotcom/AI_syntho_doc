@@ -21,9 +21,11 @@ with st.sidebar:
     model_choice = st.selectbox(
         "選擇模型 (Gemini 3 系列)",
         [
+            "gemini-2.5-flash",
+            "gemini-2.5-flash-lite",
+            "gemini-2.5-flash",
+            "gemini-3-flash-lite-preview",
             "gemini-3-flash-preview",
-            "gemini-3-pro-preview",
-            "gemini-3.1-pro-preview",
         ]
     )
     use_thinking = st.checkbox("啟用思考模式")
